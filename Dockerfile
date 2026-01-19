@@ -1,3 +1,5 @@
 FROM eclipse-temurin:17-jdk
-COPY target/*.jar app.jar
-CMD ["java","-jar","app.jar"]
+WORKDIR /app
+COPY target/java-app-1.0.jar app.jar
+EXPOSE 8080
+CMD ["java", "-jar", "app.jar"]
