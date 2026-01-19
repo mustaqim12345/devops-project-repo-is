@@ -1,0 +1,5 @@
+- hosts: green
+  become: true
+  tasks:
+    - shell: docker run -d -p 8080:8080 --name app-green java-image
+

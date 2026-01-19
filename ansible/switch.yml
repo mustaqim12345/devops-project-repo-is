@@ -1,0 +1,10 @@
+- hosts: nginx
+  become: true
+  tasks:
+    - copy:
+        src: nginx/default.conf
+        dest: /etc/nginx/conf.d/default.conf
+    - service:
+        name: nginx
+        state: restarted
+
